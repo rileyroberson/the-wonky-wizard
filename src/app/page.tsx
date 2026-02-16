@@ -74,7 +74,17 @@ export default function HomePage() {
       </div>
 
       <footer className="mt-16 text-center text-sm text-gray-600">
-        A bedtime story adventure 🌙
+        <p>A bedtime story adventure 🌙</p>
+        <p className="mt-3">
+          <a
+            href="https://rileyroberson.github.io/the-sword-of-rancor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-red-400 transition-colors text-xs"
+          >
+            Play &ldquo;The Sword of Rancor&rdquo; ⚔️
+          </a>
+        </p>
       </footer>
     </main>
   );
