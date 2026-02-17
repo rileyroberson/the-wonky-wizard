@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { characters, getCharacter } from "@/lib/storyData";
+import { characters, crossoverCharacter, getCharacter } from "@/lib/storyData";
 import { getAnyProgress } from "@/lib/progress";
 import { addItem, addSkill } from "@/lib/inventory";
 import { saveProgress } from "@/lib/progress";
@@ -112,6 +112,21 @@ export default function HomePage() {
             onClick={() => setSelectedCharacter(char)}
           />
         ))}
+      </div>
+
+      {/* Crossover Special */}
+      <div className="mt-12">
+        <div className="mb-6 text-center">
+          <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-400 to-purple-400">
+            Crossover Special
+          </p>
+        </div>
+        <div className="mx-auto max-w-sm">
+          <CharacterCard
+            character={crossoverCharacter}
+            onClick={() => setSelectedCharacter(crossoverCharacter)}
+          />
+        </div>
       </div>
 
       <footer className="mt-16 text-center text-sm text-gray-600">

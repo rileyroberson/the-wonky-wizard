@@ -20,7 +20,7 @@ export interface Choice {
 
 export interface StoryNode {
   id: string;
-  character: "wonky-wizard" | "noble-knight" | "pretty-princess" | "ranger-robot";
+  character: "wonky-wizard" | "noble-knight" | "pretty-princess" | "ranger-robot" | "all-friends";
   title: string;
   narrative: string;
   sillyMoment: string;
@@ -37,7 +37,7 @@ export interface Chapter {
 }
 
 export interface CharacterInfo {
-  id: "wonky-wizard" | "noble-knight" | "pretty-princess" | "ranger-robot";
+  id: "wonky-wizard" | "noble-knight" | "pretty-princess" | "ranger-robot" | "all-friends";
   name: string;
   tagline: string;
   emoji: string;

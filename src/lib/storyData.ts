@@ -7,6 +7,7 @@ import { prettyPrincessStory } from "./stories/pretty-princess";
 import { prettyPrincessCh2Story } from "./stories/pretty-princess-ch2";
 import { rangerRobotStory } from "./stories/ranger-robot";
 import { rangerRobotCh2Story } from "./stories/ranger-robot-ch2";
+import { allFriendsStory } from "./stories/all-friends";
 
 export const characters: CharacterInfo[] = [
   {
@@ -99,11 +100,34 @@ export const characters: CharacterInfo[] = [
   },
 ];
 
+export const crossoverCharacter: CharacterInfo = {
+  id: "all-friends",
+  name: "The Wonky Wizard and Friends",
+  tagline: "All four heroes team up in the Kingdom of Mount Boom!",
+  emoji: "🌋",
+  color: "from-yellow-400 via-red-500 to-purple-600",
+  startingItem: {
+    name: "Team Banner",
+    description: "A banner with all four heroes on it! Teamwork makes the dream work!",
+    emoji: "🚩",
+  },
+  startingSkill: {
+    name: "Team Spirit",
+    description: "When all four heroes work together, anything is possible!",
+    emoji: "🤝",
+  },
+  startNodeId: "af-01",
+  chapters: [
+    { id: "ch1", name: "Chapter 1: The Kingdom of Mount Boom", startNodeId: "af-01" },
+  ],
+};
+
 const allStories: Record<string, StoryNode[]> = {
   "wonky-wizard": [...wonkyWizardStory, ...wonkyWizardCh2Story],
   "noble-knight": [...nobleKnightStory, ...nobleKnightCh2Story],
   "pretty-princess": [...prettyPrincessStory, ...prettyPrincessCh2Story],
   "ranger-robot": [...rangerRobotStory, ...rangerRobotCh2Story],
+  "all-friends": [...allFriendsStory],
 };
 
 export function getStoryNode(
@@ -116,6 +140,7 @@ export function getStoryNode(
 }
 
 export function getCharacter(id: string): CharacterInfo | undefined {
+  if (id === crossoverCharacter.id) return crossoverCharacter;
   return characters.find((c) => c.id === id);
 }
 
