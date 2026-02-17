@@ -1,7 +1,12 @@
 import { CharacterInfo, StoryNode } from "./types";
 import { wonkyWizardStory } from "./stories/wonky-wizard";
+import { wonkyWizardCh2Story } from "./stories/wonky-wizard-ch2";
 import { nobleKnightStory } from "./stories/noble-knight";
+import { nobleKnightCh2Story } from "./stories/noble-knight-ch2";
 import { prettyPrincessStory } from "./stories/pretty-princess";
+import { prettyPrincessCh2Story } from "./stories/pretty-princess-ch2";
+import { rangerRobotStory } from "./stories/ranger-robot";
+import { rangerRobotCh2Story } from "./stories/ranger-robot-ch2";
 
 export const characters: CharacterInfo[] = [
   {
@@ -21,6 +26,10 @@ export const characters: CharacterInfo[] = [
       emoji: "🔮",
     },
     startNodeId: "wz-01",
+    chapters: [
+      { id: "ch1", name: "Chapter 1: The Giggle Goblin", startNodeId: "wz-01" },
+      { id: "ch2", name: "Chapter 2: The Wand Storm", startNodeId: "wz2-01" },
+    ],
   },
   {
     id: "noble-knight",
@@ -39,6 +48,10 @@ export const characters: CharacterInfo[] = [
       emoji: "🏃",
     },
     startNodeId: "kn-01",
+    chapters: [
+      { id: "ch1", name: "Chapter 1: The Grumpy Dragon", startNodeId: "kn-01" },
+      { id: "ch2", name: "Chapter 2: The Busted Wagon", startNodeId: "kn2-01" },
+    ],
   },
   {
     id: "pretty-princess",
@@ -57,13 +70,40 @@ export const characters: CharacterInfo[] = [
       emoji: "🐾",
     },
     startNodeId: "pr-01",
+    chapters: [
+      { id: "ch1", name: "Chapter 1: The Missing Music", startNodeId: "pr-01" },
+      { id: "ch2", name: "Chapter 2: The Starless Night", startNodeId: "pr2-01" },
+    ],
+  },
+  {
+    id: "ranger-robot",
+    name: "The Ranger Robot",
+    tagline: "A forest-protecting robot with a heart of gold circuits!",
+    emoji: "🤖",
+    color: "from-green-500 to-emerald-600",
+    startingItem: {
+      name: "Sensor Dish",
+      description: "Picks up signals from every tree and animal in the forest!",
+      emoji: "📡",
+    },
+    startingSkill: {
+      name: "Solar Boost",
+      description: "Charge up with sunlight for extra robot power! BZZZT!",
+      emoji: "☀️",
+    },
+    startNodeId: "rr-01",
+    chapters: [
+      { id: "ch1", name: "Chapter 1: The Falling Forest", startNodeId: "rr-01" },
+      { id: "ch2", name: "Chapter 2: The Junkyard Birds", startNodeId: "rr2-01" },
+    ],
   },
 ];
 
 const allStories: Record<string, StoryNode[]> = {
-  "wonky-wizard": wonkyWizardStory,
-  "noble-knight": nobleKnightStory,
-  "pretty-princess": prettyPrincessStory,
+  "wonky-wizard": [...wonkyWizardStory, ...wonkyWizardCh2Story],
+  "noble-knight": [...nobleKnightStory, ...nobleKnightCh2Story],
+  "pretty-princess": [...prettyPrincessStory, ...prettyPrincessCh2Story],
+  "ranger-robot": [...rangerRobotStory, ...rangerRobotCh2Story],
 };
 
 export function getStoryNode(

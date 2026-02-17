@@ -7,6 +7,7 @@ import { addItem, addSkill } from "@/lib/inventory";
 import { saveProgress } from "@/lib/progress";
 import CharacterCard from "@/components/CharacterCard";
 import { useEffect, useState } from "react";
+import { CharacterInfo } from "@/lib/types";
 
 export default function HomePage() {
   const router = useRouter();
@@ -14,18 +15,19 @@ export default function HomePage() {
     character: string;
     currentNodeId: string;
   } | null>(null);
+  const [selectedCharacter, setSelectedCharacter] = useState<CharacterInfo | null>(null);
 
   useEffect(() => {
     setSavedProgress(getAnyProgress());
   }, []);
 
-  function startAdventure(characterId: string) {
+  function startChapter(characterId: string, startNodeId: string) {
     const character = getCharacter(characterId);
     if (!character) return;
     addItem(characterId, character.startingItem);
     addSkill(characterId, character.startingSkill);
-    saveProgress(characterId, character.startNodeId);
-    router.push(`/story/${characterId}/${character.startNodeId}`);
+    saveProgress(characterId, startNodeId);
+    router.push(`/story/${characterId}/${startNodeId}`);
   }
 
   function continueAdventure() {
@@ -34,6 +36,45 @@ export default function HomePage() {
         `/story/${savedProgress.character}/${savedProgress.currentNodeId}`
       );
     }
+  }
+
+  // Chapter selection screen
+  if (selectedCharacter) {
+    return (
+      <main className="mx-auto max-w-3xl px-4 py-12">
+        <button
+          onClick={() => setSelectedCharacter(null)}
+          className="mb-8 rounded-lg px-4 py-2 text-sm text-gray-400 transition hover:bg-gray-800 hover:text-gray-200"
+        >
+          &larr; Back to Characters
+        </button>
+
+        <div className="mb-8 text-center">
+          <div className="text-7xl mb-4 animate-float">{selectedCharacter.emoji}</div>
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            {selectedCharacter.name}
+          </h2>
+          <p className="mt-2 text-xl text-gray-400">{selectedCharacter.tagline}</p>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          {selectedCharacter.chapters.map((chapter) => (
+            <button
+              key={chapter.id}
+              onClick={() => startChapter(selectedCharacter.id, chapter.startNodeId)}
+              className={`group w-full rounded-2xl bg-gradient-to-r ${selectedCharacter.color} p-1 text-left shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]`}
+            >
+              <div className="rounded-[0.9rem] bg-gray-900/90 px-6 py-5">
+                <p className="text-2xl font-bold text-gray-100">{chapter.name}</p>
+                <div className="mt-3 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-400 py-2 text-center text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">
+                  Start Adventure!
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </main>
+    );
   }
 
   return (
@@ -63,12 +104,12 @@ export default function HomePage() {
         </div>
       )}
 
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {characters.map((char) => (
           <CharacterCard
             key={char.id}
             character={char}
-            onClick={() => startAdventure(char.id)}
+            onClick={() => setSelectedCharacter(char)}
           />
         ))}
       </div>

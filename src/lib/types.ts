@@ -20,7 +20,7 @@ export interface Choice {
 
 export interface StoryNode {
   id: string;
-  character: "wonky-wizard" | "noble-knight" | "pretty-princess";
+  character: "wonky-wizard" | "noble-knight" | "pretty-princess" | "ranger-robot";
   title: string;
   narrative: string;
   sillyMoment: string;
@@ -30,8 +30,14 @@ export interface StoryNode {
   isEnding?: boolean;
 }
 
+export interface Chapter {
+  id: string;
+  name: string;
+  startNodeId: string;
+}
+
 export interface CharacterInfo {
-  id: "wonky-wizard" | "noble-knight" | "pretty-princess";
+  id: "wonky-wizard" | "noble-knight" | "pretty-princess" | "ranger-robot";
   name: string;
   tagline: string;
   emoji: string;
@@ -39,6 +45,7 @@ export interface CharacterInfo {
   startingItem: Item;
   startingSkill: Skill;
   startNodeId: string;
+  chapters: Chapter[];
 }
 
 export interface GameState {
