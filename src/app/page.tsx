@@ -145,26 +145,26 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* The World is Lava — game */}
+      {/* Game Center */}
       <div className="mt-10">
         <div className="mb-6 text-center">
-          <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400">
-            Clop &amp; Fluff: The World is Lava
+          <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+            Game Center
           </p>
-          <p className="mt-1 text-sm text-gray-500">An Endless Runner Game</p>
+          <p className="mt-1 text-sm text-gray-500">🎮 An endless hopper game</p>
         </div>
         <div className="mx-auto max-w-sm">
           <button
             onClick={() => router.push("/lava-run")}
-            className="group w-full rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-1 text-left shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-orange-900/40 active:scale-[0.98]"
+            className="group w-full rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 p-1 text-left shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-900/40 active:scale-[0.98]"
           >
             <div className="rounded-[0.9rem] bg-gray-900/92 px-6 py-7">
-              <div className="text-5xl mb-3">🐎🐰🌋</div>
-              <p className="text-xl font-bold text-gray-100">The World is Lava!</p>
+              <div className="text-5xl mb-3">🐰🐴</div>
+              <p className="text-xl font-bold text-gray-100">Clop Hopper</p>
               <p className="mt-1 text-sm text-gray-400">
-                Mount Boom erupted! Help Clip-Clop and Fluffington jump over the lava before it gets their hooves!
+                Fluffington has to jump over Clip-Clop. Don&apos;t ask why. Just hop.
               </p>
-              <div className="mt-4 rounded-xl bg-gradient-to-r from-orange-400 to-red-500 py-2 text-center text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="mt-4 rounded-xl bg-gradient-to-r from-purple-400 to-pink-500 py-2 text-center text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">
                 🎮 Play Now!
               </div>
             </div>
