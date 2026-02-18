@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { characters, crossoverCharacter, getCharacter } from "@/lib/storyData";
+import { characters, crossoverCharacter, clopAndFluffCharacter, getCharacter } from "@/lib/storyData";
 import { getAnyProgress } from "@/lib/progress";
 import { addItem, addSkill } from "@/lib/inventory";
 import { saveProgress } from "@/lib/progress";
@@ -126,6 +126,49 @@ export default function HomePage() {
             character={crossoverCharacter}
             onClick={() => setSelectedCharacter(crossoverCharacter)}
           />
+        </div>
+      </div>
+
+      {/* Clop & Fluff */}
+      <div className="mt-10">
+        <div className="mb-6 text-center">
+          <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400">
+            Clop &amp; Fluff
+          </p>
+          <p className="mt-1 text-sm text-gray-500">A Boom PD Mystery</p>
+        </div>
+        <div className="mx-auto max-w-sm">
+          <CharacterCard
+            character={clopAndFluffCharacter}
+            onClick={() => setSelectedCharacter(clopAndFluffCharacter)}
+          />
+        </div>
+      </div>
+
+      {/* The World is Lava — game */}
+      <div className="mt-10">
+        <div className="mb-6 text-center">
+          <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400">
+            Clop &amp; Fluff: The World is Lava
+          </p>
+          <p className="mt-1 text-sm text-gray-500">An Endless Runner Game</p>
+        </div>
+        <div className="mx-auto max-w-sm">
+          <button
+            onClick={() => router.push("/lava-run")}
+            className="group w-full rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-1 text-left shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-orange-900/40 active:scale-[0.98]"
+          >
+            <div className="rounded-[0.9rem] bg-gray-900/92 px-6 py-7">
+              <div className="text-5xl mb-3">🐎🐰🌋</div>
+              <p className="text-xl font-bold text-gray-100">The World is Lava!</p>
+              <p className="mt-1 text-sm text-gray-400">
+                Mount Boom erupted! Help Clip-Clop and Fluffington jump over the lava before it gets their hooves!
+              </p>
+              <div className="mt-4 rounded-xl bg-gradient-to-r from-orange-400 to-red-500 py-2 text-center text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">
+                🎮 Play Now!
+              </div>
+            </div>
+          </button>
         </div>
       </div>
 

@@ -8,6 +8,7 @@ import { prettyPrincessCh2Story } from "./stories/pretty-princess-ch2";
 import { rangerRobotStory } from "./stories/ranger-robot";
 import { rangerRobotCh2Story } from "./stories/ranger-robot-ch2";
 import { allFriendsStory } from "./stories/all-friends";
+import { clopAndFluffStory } from "./stories/clop-and-fluff";
 
 export const characters: CharacterInfo[] = [
   {
@@ -100,6 +101,28 @@ export const characters: CharacterInfo[] = [
   },
 ];
 
+export const clopAndFluffCharacter: CharacterInfo = {
+  id: "clop-and-fluff",
+  name: "Clop & Fluff: Boom PD",
+  tagline: "The Kingdom of Mount Boom's silliest — and ONLY — detective duo!",
+  emoji: "🕵️",
+  color: "from-sky-400 to-indigo-500",
+  startingItem: {
+    name: "Detective Hat",
+    description: "Sir Clip-Clop's official bowler hat — slightly too small, but extremely authoritative-looking!",
+    emoji: "🎩",
+  },
+  startingSkill: {
+    name: "Nose Wiggle",
+    description: "Three professional wiggles from Fluffington's nose to detect important smells at any crime scene!",
+    emoji: "🐰",
+  },
+  startNodeId: "cf-01",
+  chapters: [
+    { id: "ch1", name: "Case #1: The Stolen Ice Cream Cone", startNodeId: "cf-01" },
+  ],
+};
+
 export const crossoverCharacter: CharacterInfo = {
   id: "all-friends",
   name: "The Wonky Wizard and Friends",
@@ -128,6 +151,7 @@ const allStories: Record<string, StoryNode[]> = {
   "pretty-princess": [...prettyPrincessStory, ...prettyPrincessCh2Story],
   "ranger-robot": [...rangerRobotStory, ...rangerRobotCh2Story],
   "all-friends": [...allFriendsStory],
+  "clop-and-fluff": [...clopAndFluffStory],
 };
 
 export function getStoryNode(
@@ -141,6 +165,7 @@ export function getStoryNode(
 
 export function getCharacter(id: string): CharacterInfo | undefined {
   if (id === crossoverCharacter.id) return crossoverCharacter;
+  if (id === clopAndFluffCharacter.id) return clopAndFluffCharacter;
   return characters.find((c) => c.id === id);
 }
 
