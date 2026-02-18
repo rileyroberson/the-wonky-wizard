@@ -75,7 +75,7 @@ export const wonkyWizardStory: StoryNode[] = [
       {
         text: "Try your Silly Spell on the pudding",
         nextNodeId: "wz-03b",
-        preview: "What happens when you make pudding rainbow-colored?",
+        preview: "The rainbow sparkles seem to be leading you somewhere...",
       },
     ],
   },
@@ -170,7 +170,7 @@ export const wonkyWizardStory: StoryNode[] = [
     character: "wonky-wizard",
     title: "The Color Vault",
     narrative:
-      "You sneak in through a back tunnel and find the Color Vault — a huge room filled with stolen colors in glass jars! They're all stacked up in wobbly towers. You hear the Giggle Goblin on the other side of the door, giggling to himself: \"Hee hee, my beautiful colors! All MINE! I'll have the best painting party all by myself!\" He sounds less like a villain and more like someone who really wants to paint. You could try to free the colors right now, or you could go talk to him.",
+      "You find the chimney and squeeze yourself down — PLOP! — landing right inside the Color Vault, a huge room filled with stolen colors in glass jars! They're all stacked up in wobbly towers. You hear the Giggle Goblin on the other side of the door, giggling to himself: \"Hee hee, my beautiful colors! All MINE! I'll have the best painting party all by myself!\" He sounds less like a villain and more like someone who really wants to paint. You could try to free the colors right now, or you could go talk to him.",
     sillyMoment:
       "You accidentally bump a jar of green paint and it falls on your head. Now you look like a green wizard with a purple beard. Very fashionable!",
     itemEarned: {
@@ -198,7 +198,7 @@ export const wonkyWizardStory: StoryNode[] = [
     character: "wonky-wizard",
     title: "The Great Color Explosion!",
     narrative:
-      "You point your Mighty Wand at the jars and cast the biggest Silly Spell you've ever done! KAZOOOOOOM! All the jars start shaking and rattling. Then — POP POP POP POP POP! — every single jar bursts open and colors fly everywhere! Red and blue and green and yellow and purple swirl through the air like a beautiful tornado! The colors zoom out the windows and fly back to Rainbow Village! The Giggle Goblin watches with big, wide eyes. \"Wow,\" he whispers. \"That's the most beautiful thing I've ever seen.\" A tear rolls down his cheek. You put your Friendship Cloak around his shoulders. \"Hey,\" you say. \"Want to come to Rainbow Village? I bet they'd love someone who appreciates colors THIS much.\" The Giggle Goblin's face lights up. \"Really? You mean it?\" And just like that, you didn't just save Rainbow Village — you made a new friend!",
+      "You point your Mighty Wand at the jars and cast your Super Sneeze Spell — ACHOO! KAZOOOOOOM! All the jars start shaking and rattling. Then — POP POP POP POP POP! — every single jar bursts open and colors fly everywhere! Red and blue and green and yellow and purple swirl through the air like a beautiful tornado! The colors zoom out the windows and fly back to Rainbow Village! Even the Giggle Goblin stops and watches with big, wide eyes. \"Wow,\" he whispers. \"That's the most beautiful thing I've ever seen.\" A tear rolls down his cheek. You put your Friendship Cloak around his shoulders. \"Hey,\" you say. \"Want to come to Rainbow Village? I bet they'd love someone who appreciates colors THIS much.\" The Giggle Goblin's face lights up. \"Really? You mean it?\" And just like that, you didn't just save Rainbow Village — you made a new friend!",
     sillyMoment:
       "The colors are so excited to be free that they paint a silly mustache on everybody, including the mountain, which wakes up and says, \"Hey! Who put a mustache on me?!\" HONK-SHOO— wait, WHAT?!",
     isEnding: true,

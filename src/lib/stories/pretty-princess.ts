@@ -129,9 +129,9 @@ export const prettyPrincessStory: StoryNode[] = [
         preview: "The treehouse is just up ahead!",
       },
       {
-        text: "Send the squirrels to scout first",
+        text: "Use your Dance Power to draw out the Goblin",
         nextNodeId: "pr-04b",
-        preview: "Squirrels are excellent spies (and snack finders)...",
+        preview: "If you can't knock on the door, maybe a dance party will do the trick...",
       },
     ],
   },
@@ -170,7 +170,7 @@ export const prettyPrincessStory: StoryNode[] = [
     character: "pretty-princess",
     title: "The Dancing Discovery",
     narrative:
-      "You use your Dance Power and suddenly EVERYTHING around the treehouse starts dancing! The trees sway, the bushes boogie, and the ground does a little shimmy! The treehouse door flies open and out stumbles the Confused Goblin, confused as ever. \"Why is my house dancing?! My TEA is dancing! My SLIPPERS are dancing!\" He looks like he hasn't slept in days. His eyes are going in circles and his cotton candy earmuffs are falling apart. \"Please make it stop! I just want things to be QUIET so I can SLEEP!\" Oh! He's not a bad goblin — he's just a TIRED goblin!",
+      "You use your Dance Power and suddenly EVERYTHING around the treehouse starts dancing! The trees sway, the bushes boogie, and the ground does a little shimmy! The treehouse door flies open and out stumbles the Confused Goblin, confused as ever. \"Why is my house dancing?! My TEA is dancing! My SLIPPERS are dancing!\" He looks like he hasn't slept in days. His eyes are going in circles and his cotton candy earmuffs are falling apart. \"Please make it stop! I just want things to be QUIET so I can SLEEP!\" Oh! He's not a bad goblin — he's just a TIRED goblin! Through the open treehouse door, you catch a glimpse of the enormous Noise Jar sitting on his table, crammed full of swirling, squirming sounds.",
     sillyMoment:
       "The Confused Goblin's slippers dance right off his feet and start doing the cha-cha across the forest floor. He chases them but trips over Fluffington, and they both roll into a bush. Fluffington pops out wearing one of the slippers as a hat.",
     itemEarned: {
@@ -198,7 +198,7 @@ export const prettyPrincessStory: StoryNode[] = [
     character: "pretty-princess",
     title: "The Sweetest Lullaby",
     narrative:
-      "You hold up your Singing Flowers and they start playing the sweetest, softest lullaby you've ever heard. The Confused Goblin's eyes get heavy. His head starts to nod. \"That's... so... nice...\" he mumbles. Fluffington finds a blanket and tucks the goblin in right there on his porch. Within seconds, the goblin is fast asleep, snoring tiny purple snores. While he sleeps, you carefully open the Noise Jar. WHOOOOOOSH! All the sounds fly back to the forest! Birds start singing! Frogs start ribbiting! The waterfall goes WHOOOOSH again! But the sounds are gentle near the goblin's treehouse — your Singing Flowers put a soft quiet spell around it so he can sleep peacefully. When the goblin wakes up hours later, he's the happiest he's ever been. \"I slept! I actually SLEPT!\" He builds a Rainbow Bridge from his treehouse to your castle so you can visit each other anytime. The whole forest celebrates with the biggest, most musical party ever — with a quiet corner for the goblin, of course!",
+      "You hold up your Singing Flowers and they start playing the sweetest, softest lullaby you've ever heard. The Confused Goblin's eyes get heavy. His head starts to nod. \"That's... so... nice...\" he mumbles. Fluffington finds a blanket and tucks the goblin in right there on his porch. Within seconds, the goblin is fast asleep, snoring tiny purple snores. While he sleeps, you carefully open the Noise Jar. WHOOOOOOSH! All the sounds fly back to the forest! Birds start singing! Frogs start ribbiting! The waterfall goes WHOOOOSH again! But the sounds are gentle near the goblin's treehouse — your Singing Flowers put a soft quiet spell around it so he can sleep peacefully. When the goblin wakes up hours later, he's the happiest he's ever been. \"I slept! I actually SLEPT!\" Together, you use your Rainbow Bridge to connect his treehouse to your castle so you can visit each other anytime. The whole forest celebrates with the biggest, most musical party ever — with a quiet corner for the goblin, of course!",
     sillyMoment:
       "At the party, Fluffington tries to sing karaoke but he only knows one song, and it's just the word \"carrots\" sung to the tune of \"Twinkle Twinkle Little Star.\" Everyone gives him a standing ovation anyway because he's VERY confident about it.",
     isEnding: true,

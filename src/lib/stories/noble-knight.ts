@@ -114,7 +114,7 @@ export const nobleKnightStory: StoryNode[] = [
     character: "noble-knight",
     title: "The Singing Stones",
     narrative:
-      "You take the Rocky Shortcut and discover that the rocks actually SING! Every time you step on one, it sings a note: \"DOOO! REEE! MIIII!\" Sir Clip-Clop starts prancing on the rocks on purpose, making a silly song: \"DO MI SOL DO MI SOL!\" He's actually pretty good! At the top of the path, you can see Marshmallow Mountain and the Grumpy Dragon's cave. The dragon shoots another smoke ring into the sky. POOOOF! Your hair stands straight up.",
+      "You follow the rocky path and discover that the rocks actually SING! Every time you step on one, it sings a note: \"DOOO! REEE! MIIII!\" Sir Clip-Clop starts prancing on the rocks on purpose, making a silly song: \"DO MI SOL DO MI SOL!\" He's actually pretty good! At the top of the path, you can see Marshmallow Mountain and the Grumpy Dragon's cave. The dragon shoots another smoke ring into the sky. POOOOF! Your hair stands straight up.",
     sillyMoment:
       "Sir Clip-Clop plays \"Twinkle Twinkle Little Star\" on the singing stones with his hooves. He takes a bow. The rocks give him a standing ovation. Rocks can't actually stand, but they wobble enthusiastically.",
     skillEarned: {
@@ -142,7 +142,7 @@ export const nobleKnightStory: StoryNode[] = [
     character: "noble-knight",
     title: "The Grumpy Dragon",
     narrative:
-      "You march right into the cave and find the Grumpy Dragon! He's actually not that big — about the size of a school bus, which is still pretty big, but not SCARY big. He has little round glasses and is sitting on a pile of marshmallows. He's blowing smoke rings and looking VERY grumpy. \"Go away!\" the dragon grumbles. \"I moved here because everyone in Dragon Town said my smoke rings were annoying. Well if I'M annoying, then I'll just annoy EVERYONE from up here! HMPH!\" He blows a smoke ring right at you. POOF! Your hair stands up again.",
+      "You march right into the cave and find the Grumpy Dragon! He's actually not that big — about the size of a school bus, which is still pretty big, but not SCARY big. He has little round glasses and is sitting on a pile of marshmallows. The cave walls are covered in beautiful paintings of flowers and butterflies and rainbows — did the dragon paint all of those? He's blowing smoke rings and looking VERY grumpy. \"Go away!\" the dragon grumbles. \"I moved here because everyone in Dragon Town said my smoke rings were annoying. Well if I'M annoying, then I'll just annoy EVERYONE from up here! HMPH!\" He blows a smoke ring right at you. POOF! Your hair stands up again.",
     sillyMoment:
       "Sir Clip-Clop walks up to the dragon, looks at him, and says, \"Your glasses are crooked.\" The dragon gets embarrassed and tries to fix them, but his claws are too big and he keeps fumbling. He looks like he's trying to thread a needle with oven mitts on.",
     itemEarned: {
